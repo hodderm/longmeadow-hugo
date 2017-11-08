@@ -12,7 +12,7 @@ install:
   - go get github.com/spf13/hugo
 
 script:
-  - hugo -b http://localhost/longmeadow.com --canonifyURLs
+  - hugo -b http://longmeadow-church.org.uk/ --canonifyURLs
 
 after_success:
   "lftp -u ${FTP_USER},${FTP_PASSWORD} -e 'mirror --reverse public/ /;exit' sftp://home199125616.1and1-data.host"
